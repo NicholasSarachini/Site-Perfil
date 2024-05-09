@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuário</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="shortcut icon" href="./ico/imagem-aba.ico.ico" type="image/x-icon">
+    
+</head>
+<body>
+    <div>
+        <div class = "header">
+        <h1>Usuário</h1>
+        <p>Olá! Sou o dev-Nic!</p>
+        <img class = "avatar" src="avatar.jpg" alt="Avatar"/>
+        </div>
+
+        <form>
+            <h1 for = "ibio">Escreva sua biografia (mín 50 caracteres):</h1>
+            <input type="text" name="ibio" id="bio" minlength="50" maxlength="500"
+            oninput="resultado.innerHTML = String(ibio.value)">
+
+            <p class="biograf" >
+                <output for="ibio" id="resultado"></output>
+            </p>
+        </form>
+
+        <div class="detalhes">
+        <h1>Detalhes</h1>
+            <div id = "posicao">
+
+                <div class = "quadrado">
+                   <form>
+                    <p>
+                        <span class = "negrito" for="nome">Qual é o seu nome? </span>
+                        <input type="text" name="nome" id="nm" required 
+                        oninput="resultado.innerHTML = String(nome.value)">
+                    </p>
+                    <p class="resp">
+                        <output for="nome" id="resultado"></output>
+                    </p>
+                        
+                   </form>
+                </div>
+
+                <div class = "quadrado">
+
+                    <form>
+                        <p>
+                            <span class = "negrito" for="idade">Quantos anos você tem?</span>
+                            <input type="number" name="idade" id="age" required  
+                            oninput="resultado.innerHTML = Number(idade.value)">
+                        </p>
+                        <p class="resp">
+                            <output for="idade" id="resultado"></output>
+                        </p>
+
+                    </form>
+                </div>
+
+                <div class = "quadrado">
+                    <form>
+                        <p>
+                            <span class = "negrito" for="endereco">Qual o seu endereço? </span>
+                            <input type="text" name="endereco" id="end" required
+                            oninput="resultado.innerHTML = String(endereco.value)">
+                        </p>
+                        <p class="resp">
+                            <output for="endereco" id="resultado"></output>
+                        </p>
+                    </form>
+                </div>
+
+                <div class = "quadrado">
+                    <form>
+                        <p>
+                            <span class = "negrito" for="bairro">Qual o seu bairro?</span> 
+                            <input type="text" name="bairro" id="brr" required
+                            oninput="resultado.innerHTML = String(bairro.value)">
+                        </p>
+                        <p class="resp">
+                            <output for="bairro" id="resultado"></output>
+                        </p>
+                    </form>
+                </div>
+
+                <div class = "quadrado">
+                    <form>
+                        <p>
+                            <span class = "negrito" for="estado">Qual o seu Estado?</span> 
+                            <input type="text" name="estado" id="est" required
+                            oninput="resultado.innerHTML = String(estado.value)">
+                        </p>
+                        <p class="resp">
+                            <output for="est" id="resultado"></output>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class = "footer">
+        <img src="ico_instagram.png" class = "ico"/>
+        <img src="ico_twitter.png" class = "ico"/>
+        <img src="ico_facebook.png" class = "ico"/>
+        </div>
+
+        <script>
+            const biograph = document.getElementById('biografia');
+            const btn1 = document.getElementById('btn1');
+            const out1 = documen.getElementById('output1');
+
+            function fun1() {
+                out1.innerHTML = biograph.value;
+            }
+
+            btn1.addEventListener('click',fun1);
+        </script>
+    </div>
+</body>
+</html>
